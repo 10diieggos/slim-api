@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '3109aa29365542a7bf353af505f6784f84b4fa77',
+        'reference' => 'b5abe4c657d91e765fe5faf2a8df3edb355501e3',
         'name' => 'slim/slim-skeleton',
         'dev' => true,
     ),
@@ -470,7 +470,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '3109aa29365542a7bf353af505f6784f84b4fa77',
+            'reference' => 'b5abe4c657d91e765fe5faf2a8df3edb355501e3',
             'dev_requirement' => false,
         ),
         'symfony/console' => array(
