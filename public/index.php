@@ -22,6 +22,7 @@ $dependencies = require __DIR__ . '/../src/dependencies.php';
 $container = $dependencies($app);
 
 // Register middleware
+$container->get('secretKey');
 $middleware = require __DIR__ . '/../src/middleware.php';
 $middleware($app);
 

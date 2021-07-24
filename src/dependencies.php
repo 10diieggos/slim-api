@@ -32,6 +32,12 @@ return function (App $app) {
         return $capsule;
     };
 
+    //secret
+    $container['secretKey'] = function ($c) {
+        $secretKey = $c->get('settings')['secretKey'];
+        return $secretKey;
+    };
+
     return $container;
 
 };

@@ -16,20 +16,30 @@ $container = $dependencies($app);
 $db = $container->get('db');
 $schema = $db->schema();
 
-$table = 'produtos';
+// $table = 'produtos';
+// $schema->dropIfExists($table);
+// $schema->create($table, function($table)
+// {
+//   $table->increments('id');
+//   $table->string('titulo', 100);
+//   $table->text('descricao');
+//   $table->decimal('preco', 11, 2);
+//   $table->string('fabricante');
+//   $table->timestamps();
+// });
+
+// //insert data
+// require 'data.php';
+// foreach ($data as $product) {
+//   $db->table($table)->insert([$product]);
+// }
+
+$table = 'usuarios';
 $schema->dropIfExists($table);
 $schema->create($table, function($table)
 {
-  $table->increments('id');
-  $table->string('titulo', 100);
-  $table->text('descricao');
-  $table->decimal('preco', 11, 2);
-  $table->string('fabricante');
-  $table->timestamps();
+  $table->increments('id')->nullable(false);
+  $table->string('nome', 100);
+  $table->string('email', 150)->unique();
+  $table->string('senha', 32);
 });
-
-//insert data
-require 'data.php';
-foreach ($data as $product) {
-  $db->table($table)->insert([$product]);
-}
